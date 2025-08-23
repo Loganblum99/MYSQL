@@ -172,12 +172,12 @@ public class ProjectDao extends provided.util.DaoBase{
 	public boolean modifyProjectDetails(Project project) {
 		// @formatter:off
 		String sql = ""
-				+ "UPDATE " + PROJECT_TABLE + " SET '"
+				+ "UPDATE " + PROJECT_TABLE + " SET "
 				+ "project_name = ?, "
 				+ "estimated_hours = ?, "
 				+ "actual_hours = ?, "
 				+ "difficulty = ?, "
-				+ "notes = ?,"
+				+ "notes = ?"
 				+" WHERE project_id = ?";
 		// @formatter:on
 		try(Connection conn = DbConnection.getConnection()){
